@@ -23,9 +23,9 @@ app.use(cors({
   credentials: true,
 }));
 
-app.use("/api/user", userRoutes);
-app.use("/api/chat", chatRoutes);
-app.use("/api/message", messageRoutes);
+app.use("https://chatapp-2vbx.onrender.com/api/user", userRoutes);
+app.use("https://chatapp-2vbx.onrender.com/api/chat", chatRoutes);
+app.use("https://chatapp-2vbx.onrender.com/api/message", messageRoutes);
 
 // --------------------------deployment------------------------------
 

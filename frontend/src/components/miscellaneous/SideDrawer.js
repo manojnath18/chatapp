@@ -77,7 +77,7 @@ function SideDrawer() {
         },
       };
 
-      const { data } = await axios.get(`/api/user?search=${search}`, config);
+      const { data } = await axios.get(`https://chatapp-2vbx.onrender.com/api/user?search=${search}`, config);
 
       setLoading(false);
       setSearchResult(data);
