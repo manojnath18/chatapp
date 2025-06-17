@@ -19,7 +19,7 @@ app.use(express.json()); // to accept json data
 //   res.send("API Running!");
 // });
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: "https://chatapp-2vbx.onrender.com",
   credentials: true,
 }));
 
@@ -59,7 +59,7 @@ const server = app.listen(
 const io = require("socket.io")(server, {
   pingTimeout: 60000,
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://chatapp-2vbx.onrender.com",
     // credentials: true,
   },
 });
