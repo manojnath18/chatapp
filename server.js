@@ -1,10 +1,10 @@
 const express = require("express");
-const connectDB = require("./config/db");
+const connectDB = require("./backend/config/db");
 const dotenv = require("dotenv");
-const userRoutes = require("./routes/userRoutes");
-const chatRoutes = require("./routes/chatRoutes");
-const messageRoutes = require("./routes/messageRoutes");
-const { notFound, errorHandler } = require("./middleware/errorMiddleware");
+const userRoutes = require("./backend/routes/userRoutes");
+const chatRoutes = require("./backend/routes/chatRoutes");
+const messageRoutes = require("./backend/routes/messageRoutes");
+const { notFound, errorHandler } = require("./backend/middleware/errorMiddleware");
 const path = require("path");
 
 dotenv.config({ path: path.resolve(__dirname, ".env") });
@@ -23,9 +23,9 @@ app.use(cors({
   credentials: true,
 }));
 
-app.use("https://chatapp-2vbx.onrender.com/api/user", userRoutes);
-app.use("https://chatapp-2vbx.onrender.com/api/chat", chatRoutes);
-app.use("https://chatapp-2vbx.onrender.com/api/message", messageRoutes);
+app.use("/api/user", userRoutes);
+app.use("/api/chat", chatRoutes);
+app.use("/api/message", messageRoutes);
 
 // --------------------------deployment------------------------------
 
