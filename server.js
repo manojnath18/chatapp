@@ -8,7 +8,6 @@ const { notFound, errorHandler } = require("./backend/middleware/errorMiddleware
 const path = require("path");
 
 dotenv.config({ path: path.resolve(__dirname, ".env") });
-console.log("Loaded MONGO_URI:", process.env.MONGO_URI);
 
 connectDB();
 const app = express();
